@@ -1,0 +1,49 @@
+GET http://localhost:3000/books/
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFqYXkiLCJpYXQiOjE3MjYxNjY4Njh9.NIEm2zyl_Yppz6Scy57lUJGDbMpg92yq_4NkjW676MM
+
+
+
+###
+GET http://localhost:3000/books/1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFqYXkiLCJpYXQiOjE3MjYxNjY3NTl9.YsG1DFYWi0vmPzDnKgkdLY0duNwOBPX3E4TdTYQpfXM
+
+###
+DELETE http://localhost:3000/books/1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFqYXkiLCJpYXQiOjE3MjYxNjY3NTl9.YsG1DFYWi0vmPzDnKgkdLY0duNwOBPX3E4TdTYQpfXM
+
+###
+POST http://localhost:3000/books/
+Content-Type:application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFqYXkiLCJpYXQiOjE3MjYxNjY3NTl9.YsG1DFYWi0vmPzDnKgkdLY0duNwOBPX3E4TdTYQpfXM
+
+
+{
+    "name":"ajay",
+    "author_name":"jay",
+    "published_year":2023
+}
+
+###
+POST http://localhost:3000/login/ 
+Content-Type:application/json
+
+{
+    "username":"ajay",
+    "password":"ajay123"
+}
+
+###
+POST http://localhost:3000/register/
+Content-Type:application/json
+
+{
+     "username":"ajay",
+    "password":"ajay123",
+    "age":24,
+    "location":"hyde"
+}
+
+###
+GET http://localhost:3000/users/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFqYXkiLCJpYXQiOjE3MjYxNjY3NTl9.YsG1DFYWi0vmPzDnKgkdLY0duNwOBPX3E4TdTYQpfXM
+
