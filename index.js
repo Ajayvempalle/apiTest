@@ -79,9 +79,16 @@ app.post('/books/',authenticate,async(request,response)=>{
 
 app.delete('/books/:bookId',authenticate,async(request,response)=>{
     const {bookId}=request.params
-    const query=`delete from book where book_id=${bookId}`
-    const result=await db.run(query)
-    response.send('deleted successfully')
+    const query1=`select * from book where book_id=${bookId}`
+    const result1=await db.get(query1)
+    if(result1===undefined){
+        response.send('book not exists...')
+    }else{
+        const query=`delete from book where book_id=${bookId}`
+        const result=await db.run(query)
+        response.send('deleted successfully')
+    }
+    
 })
 
 app.post('/login/',async(request,response)=>{
